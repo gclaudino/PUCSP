@@ -12,39 +12,54 @@ int somadordiames(int, int);
 int bissexto (int a);
 
 int main() {
-    int diaFinal, mesFinal, anoFinal, aux, dAno;
-    int dia, mes , ano, diastotais, diaVida;
+    int diaFinal, mesFinal, anoFinal, aux, anoAux, dAno;
+    int dia, mes , ano, diastotais, diasTotaisFinal, diaVida;
     
-    printf("Digite a data do seu nascimento na forma XX/XX/XXXX:\n");
-    scanf("%d/%d/%d",&dia,&mes,&ano);
+    do{
+    printf("Digite a dia do seu nascimento na forma XX:\n");
+    scanf("%d",&dia);
+	}while(dia < 0 || dia >= 31);
+	do{
+	printf("Digite a mes do seu nascimento na forma XX:\n");
+    scanf("%d",&mes);
+    }while(mes<0||mes>13);
+	do{
+	printf("Digite a ano do seu nascimento na forma XXXX:\n");
+	scanf("%d",&ano);
+    }while(ano<1000 || ano > 9999);
+    do{
+    printf("Digite o dia atual na forma XX:\n");
+    scanf("%d",&diaFinal);
+	}while(diaFinal < 0 || diaFinal >= 31);
+	do{
+	printf("Digite o mes atual na forma XX:\n");
+    scanf("%d",&mesFinal);
+    }while(mesFinal<0||mesFinal>13);
+	do{
+	printf("Digite o ano atual na forma XXXX:\n");
+	scanf("%d",&anoFinal);
+    }while(anoFinal<1000 || anoFinal >= 9999);
     
-    printf("Digite a data do dia atua na forma XX/XX/XXXX: \n");
-    scanf("%d/%d/%d",&diaFinal,&mesFinal,&anoFinal);
-    
+   
    
     
     diastotais = somadordiames(ano, mes);
     diastotais -= dia;
-    
+    printf("%d", diastotais);
     
     
     aux = ano; 
     
-    while(aux != anoFinal){
+    while(aux != ano){
     	
-    	bissexto(aux);
-    	if(dAno == 365){
-    		diaVida = diaVida + 365;
-		}else{
-			diaVida = diaVida + 366;
-		}
+    	diaVida = diaVida + bissexto(aux);
     	aux++;
 	}
     
-    diastotais = somadordiames(anoFinal, mesFinal);
-    diastotais -= diaFinal;
-    printf("%d",diastotais);
-    
+    diasTotaisFinal= somadordiames(anoFinal, mesFinal);
+    diasTotaisFinal -= diaFinal;
+    printf("\n%d",diasTotaisFinal);
+    printf("\n%d",diaVida);
     diaVida = diaVida - diastotais;
     
     printf("\n%d", aux);
