@@ -4,7 +4,6 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class Servidor {
-
     public void run() throws IOException {
         ServerSocket ss = new ServerSocket(9001);
         int n = 0;
