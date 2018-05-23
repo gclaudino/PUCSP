@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=TarefaCliente
+comment1.params=servidor
+comment1.target=TarefaCliente(java.net.Socket)
+comment2.params=socket
+comment2.target=java.io.BufferedReader\ definirFluxoEntrada(java.net.Socket)
+comment3.params=socket
+comment3.target=java.io.PrintWriter\ definirFluxoSaida(java.net.Socket)
+comment4.params=
+comment4.target=void\ run()
+numComments=5
