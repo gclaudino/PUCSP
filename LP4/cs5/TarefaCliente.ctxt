@@ -1,3 +1,15 @@
 #BlueJ class context
 comment0.target=TarefaCliente
-numComments=1
+comment1.params=servidor
+comment1.target=TarefaCliente(java.net.Socket)
+comment2.params=servidor
+comment2.target=java.io.BufferedReader\ definirFluxoEntrada(java.net.Socket)
+comment3.params=servidor
+comment3.target=java.io.PrintWriter\ definirFluxoSaida(java.net.Socket)
+comment4.params=texto
+comment4.target=void\ associar(javax.swing.JTextField)
+comment5.params=c
+comment5.target=void\ associar(Cliente)
+comment6.params=
+comment6.target=void\ run()
+numComments=7

@@ -18,12 +18,12 @@ public class TarefaCliente
     }
     BufferedReader fluxoEntrada;
     PrintWriter fluxoSaida;
-    Cliete client;
+    Cliente cliente;
 
     public BufferedReader definirFluxoEntrada(Socket servidor)throws IOException{
         InputStream is = servidor.getInputStream();
         InputStreamReader istream = new InputStreamReader(is);
-        return new BufferReader(istream);
+        return new BufferedReader(istream);
 
     }
     
@@ -43,18 +43,18 @@ public class TarefaCliente
 
     void associar(Cliente c){
         cliente = c;
-        associar(client.entrada);
+        associar(cliente.entrada);
     }
 
     void run() throws IOException{
         while(true){
             String texto = fluxoEntrada.readLine();
-            if (texto.startWith("REGISTRO")){
+            if (texto.startsWith("REGISTRO")){
                 fluxoSaida.println(cliente.obterParticipante());
-            }else if(texto.startWith("ACEITO")){
+            }else if(texto.startsWith("ACEITO")){
 
-            }else if (texto.startWith("MENSAGEM")){
-                cliente.sala.append(tecto.substring(9) + "\n");
+            }else if (texto.startsWith("MENSAGEM")){
+                cliente.sala.append(texto.substring(9) + "\n");
             }
         }
     }

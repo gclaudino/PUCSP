@@ -2,4 +2,10 @@
 comment0.target=Cliente
 comment1.params=
 comment1.target=Cliente()
-numComments=2
+comment2.params=
+comment2.target=java.lang.String\ obterIpServidor()
+comment3.params=
+comment3.target=java.lang.String\ obterParticipante()
+comment4.params=
+comment4.target=void\ run()
+numComments=5
