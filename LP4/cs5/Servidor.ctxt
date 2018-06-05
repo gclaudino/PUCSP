@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Servidor
+comment1.params=
+comment1.target=Servidor()
+comment2.params=nome\ fs
+comment2.target=boolean\ receber(java.lang.String,\ java.io.PrintWriter)
+comment3.params=cmd\ nome\ texto
+comment3.target=void\ difundir(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment4.params=nome
+comment4.target=void\ remover(java.lang.String)
+comment5.params=
+comment5.target=void\ run()
+numComments=6
